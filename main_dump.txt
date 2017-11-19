@@ -1,0 +1,67 @@
+0x08048230 <main+0>:	lea    0x4(%esp),%ecx # Load Address
+0x08048234 <main+4>:	and    $0xfffffff0,%esp # And 
+0x08048237 <main+7>:	pushl  -0x4(%ecx) # Push a long onto the stack
+0x0804823a <main+10>:	push   %ebp # Push base pointed onto the stack
+0x0804823b <main+11>:	mov    %esp,%ebp # Move the stack pointer to base pointer 
+0x0804823d <main+13>:	push   %edi # Push the general-purpose register
+0x0804823e <main+14>:	push   %ecx # Push a function parameter or counter
+0x0804823f <main+15>:	sub    $0x1f0,%esp # Subtract 496 from stack pointer
+0x08048245 <main+21>:	movl   $0x0,-0x10(%ebp) # Move 0 to base pointer (-16)
+0x0804824c <main+28>:	movl   $0x205f5e5b,-0x174(%ebp) # 543120987 to bp (-372) 
+0x08048256 <main+38>:	movl   $0x24435f5d,-0x170(%ebp) # 608395101 to bp (-368)
+0x08048260 <main+48>:	movl   $0x5b206677,-0x16c(%ebp) # 1528850039 to bp (-364)
+0x0804826a <main+58>:	movl   $0x66775f5e,-0x168(%ebp) # 1719099230 to bp (-360)
+0x08048274 <main+68>:	movl   $0x5b20615d,-0x164(%ebp) # 0x5b20615d to bp (-356)
+0x0804827e <main+78>:	movl   $0x5b5e7c5e,-0x160(%ebp) # 1532918878 to bp (-352)
+0x08048288 <main+88>:	movl   $0x5d5d5b,-0x15c(%ebp)   # 6118747 to bp (-348)
+0x08048292 <main+98>:	lea    -0x158(%ebp),%eax # bp (-344), return value or special
+0x08048298 <main+104>:	mov    %eax,-0x1e0(%ebp) # move return value to base pointer (480)
+0x0804829e <main+110>:	movl   $0x0,-0x1e4(%ebp) # Move 0 to base pointer ()
+0x080482a8 <main+120>:	mov    $0x48,%eax
+0x080482ad <main+125>:	cmp    $0x4,%eax
+0x080482b0 <main+128>:	jb     0x80482d0 <main+160>
+0x080482b2 <main+130>:	movl   $0x12,-0x1e8(%ebp)
+0x080482bc <main+140>:	mov    -0x1e0(%ebp),%edi
+0x080482c2 <main+146>:	mov    -0x1e8(%ebp),%ecx
+0x080482c8 <main+152>:	mov    -0x1e4(%ebp),%eax
+0x080482ce <main+158>:	rep stos %eax,%es:(%edi)
+0x080482d0 <main+160>:	movl   $0x0,-0xc(%ebp)
+0x080482d7 <main+167>:	movl   $0x80a8328,(%esp)
+0x080482de <main+174>:	call   0x8048f10 <puts>
+0x080482e3 <main+179>:	movl   $0x80a83cf,(%esp)
+0x080482ea <main+186>:	call   0x8048f10 <puts>
+0x080482ef <main+191>:	lea    -0x110(%ebp),%eax
+0x080482f5 <main+197>:	mov    %eax,(%esp)
+0x080482f8 <main+200>:	call   0x8048d50 <gets>
+0x080482fd <main+205>:	jmp    0x804831b <main+235> # jump to... 
+0x080482ff <main+207>:	mov    -0xc(%ebp),%edx
+0x08048302 <main+210>:	mov    -0xc(%ebp),%eax
+0x08048305 <main+213>:	add    $0x5,%eax
+0x08048308 <main+216>:	movzbl -0x174(%ebp,%eax,1),%eax
+0x08048310 <main+224>:	mov    %al,-0x1d8(%ebp,%edx,1)
+0x08048317 <main+231>:	addl   $0x1,-0xc(%ebp)
+0x0804831b <main+235>:	cmpl   $0x7,-0xc(%ebp) # ...here 
+0x0804831f <main+239>:	jle    0x80482ff <main+207> # comparison 
+0x08048321 <main+241>:	mov    -0xc(%ebp),%eax
+0x08048324 <main+244>:	movb   $0x0,-0x1d8(%ebp,%eax,1)
+0x0804832c <main+252>:	lea    -0x1d8(%ebp),%eax
+0x08048332 <main+258>:	mov    %eax,0x4(%esp)
+0x08048336 <main+262>:	lea    -0x110(%ebp),%eax
+0x0804833c <main+268>:	mov    %eax,(%esp)
+0x0804833f <main+271>:	call   0x8050500 <strcmp>
+0x08048344 <main+276>:	test   %eax,%eax
+0x08048346 <main+278>:	jne    0x804834f <main+287> # comparisons 
+0x08048348 <main+280>:	movl   $0x1,-0x10(%ebp)
+0x0804834f <main+287>:	cmpl   $0x1,-0x10(%ebp)
+0x08048353 <main+291>:	jne    0x8048363 <main+307> # comparisons 
+0x08048355 <main+293>:	movl   $0x80a83e4,(%esp)
+0x0804835c <main+300>:	call   0x8048f10 <puts>
+0x08048361 <main+305>:	jmp    0x804836f <main+319> # jump to... 
+0x08048363 <main+307>:	movl   $0x80a842c,(%esp)
+0x0804836a <main+314>:	call   0x8048f10 <puts>
+0x0804836f <main+319>:	add    $0x1f0,%esp # here...
+0x08048375 <main+325>:	pop    %ecx
+0x08048376 <main+326>:	pop    %edi
+0x08048377 <main+327>:	pop    %ebp
+0x08048378 <main+328>:	lea    -0x4(%ecx),%esp
+0x0804837b <main+331>:	ret    

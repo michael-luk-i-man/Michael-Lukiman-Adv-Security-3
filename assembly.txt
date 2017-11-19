@@ -1,0 +1,13 @@
+I'm taking you along on an adventure into assembly code! This is for an assignment but I figure I can make a blog post. 
+
+lea = load effective address
+and = logical and
+pushl = push long onto stack 
+push = push onto stack
+mov = move from/to
+jle = jump if condition met 
+jb = jump if <
+jne = jump if not equal
+cmpl = compare unsigned
+
+Jumping over password verification in a  
